@@ -1,7 +1,7 @@
 fun main() {
-    println(
-        12 isInRange (2..5)
-    )
+    val expression = {
+        println("1")
+        println("2")
+    }
+    expression()
 }
-
-private infix fun Int.isInRange(range: IntRange) = this in range
