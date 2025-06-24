@@ -1,6 +1,9 @@
-import java.text.DecimalFormat
-
 fun main() {
-    val earthPeople = 8_000_000_000L
-    println(DecimalFormat("#,###").format(earthPeople))
+    val emotions = "happiness sadness embarrassment amazed excited"
+    println(emotions.wordCount())
+}
+
+// Extension function implemented on String class!
+private fun String.wordCount(): Short {
+    return this.split(' ').size.toShort()
 }
