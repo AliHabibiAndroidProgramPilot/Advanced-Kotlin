@@ -1,7 +1,6 @@
 fun main() {
-    val expression = {
-        println("1")
-        println("2")
+    val average = { number1: Int, number2: Int ->
+        (number1 + number2) / 2
     }
-    expression()
+    println(average(10, 20))
 }
