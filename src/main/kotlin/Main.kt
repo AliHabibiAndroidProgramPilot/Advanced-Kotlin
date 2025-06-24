@@ -1,11 +1,10 @@
 fun main() {
-    val average: (number1: Int, number2: Int) -> Int = { number1, number2 ->
-        (number1 + number2) / 2
+    val message = "Hello to Kotlin"
+    showAlert(message) {
+        println("test")
     }
-    println(average(10, 20))
+}
 
-    val sayHello: (name: String) -> String = { name ->
-        "Hello, Welcome $name"
-    }
-    println(sayHello("Ali"))
+private fun showAlert(text: String, listener: (text: String) -> Unit) {
+    listener(text)
 }
