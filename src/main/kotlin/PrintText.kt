@@ -1,17 +1,8 @@
-class PrintText private constructor() {
-    companion object {
-        /*var instance: PrintText? = null
-        fun getPrintTextInstance(): PrintText {
-            if (instance == null) instance = PrintText()
-            return instance!!
-        }*/
-        val instance: PrintText by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
-            PrintText()
-        }
-    }
+import kotlin.properties.Delegates
 
-    fun log() {
-        println("Hello From Print Class")
+class PrintText() {
+    var age by Delegates.observable(20) { _, oldValue, newValue ->
+        println("Old Value: $oldValue")
+        println("New Value: $newValue")
     }
-
 }
